@@ -2,7 +2,7 @@ const app = require("./src/app")
 const connectToDb = require("./src/config/database")
 const mongoose= require("mongoose")
 
-
+require("dotenv").config();
 
 connectToDb()
 

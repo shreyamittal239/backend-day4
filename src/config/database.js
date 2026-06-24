@@ -2,10 +2,13 @@ const mongoose = require("mongoose")
 
 
 function connectToDb(){
-    mongoose.connect("mongodb+srv://shreyamittal239_db_user:QBP1WgkomniGpNNg@cluster0.yucneyg.mongodb.net/day-4")
+    console.log("MONGO_URI =", process.env.MONGO_URI);
+    mongoose.connect(process.env.MONGO_URI)
     .then(()=> {
         console.log("connected to database")
     })
 }
+
+
 
 module.exports=connectToDb
